@@ -12,7 +12,7 @@ const userSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        minlength: 50
+        minlength: 5
     },
     lastname: {
         type: String,
@@ -26,11 +26,11 @@ const userSchema = mongoose.Schema({
     token: {
         type: String
     },
-    tokenExp:{
+    tokenExp: {
         type: Number
     }
 })
 
-const User = mongooser.Model('User', userSchema)
+const User = mongoose.model('User', userSchema)
 
-module.exports = { User }
+module.exports = { User } 
